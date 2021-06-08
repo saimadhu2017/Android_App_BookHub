@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.BookDescriptionActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar_book_desc"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/teal_700"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:title="Book Details" />
+
+    <LinearLayout
+        android:id="@+id/linear_layout_book_desc"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_below="@id/toolBar_book_desc"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="6">
+
+        <ImageView
+            android:id="@+id/iv_book_desc"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="2"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="2.5">
+
+            <TextView
+                android:id="@+id/tv_book_name_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Book Name"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_book_authorName_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_book_name_desc"
+                android:layout_marginTop="15dp"
+                android:text="Albert james" />
+
+            <TextView
+                android:id="@+id/tv_book_price_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_book_authorName_desc"
+                android:layout_marginTop="15dp"
+                android:text="Rs. 600"
+                android:textColor="@color/teal_700" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_rating_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:drawableLeft="@drawable/starratin"
+            android:drawablePadding="5dp"
+            android:text="4.5"
+            android:textColor="#FBB900"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/about_book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear_layout_book_desc"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="About the Book:"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_below="@id/about_book"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/tv_book_desc_para"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="sample Text from para "
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/b_add_to_fav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/teal_700"
+        android:text="@string/add_to_favourites" />
+
+    <RelativeLayout
+        android:id="@+id/progress_layout_for_bookDesc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ProgressBar
+            android:id="@+id/progress_bar_Book_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>
